@@ -1,0 +1,429 @@
+:root{
+    --kold-blue: #395DF6;
+}
+
+body{
+    width: 100vw;
+    height: 100vh;
+    background: #000;
+    overflow: hidden;
+    font-family: 'Philosopher', serif;
+    user-select: none;
+    cursor: url('../cursor.png'), auto;
+}
+
+body > div{
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+h1{
+    font-size: 72px;
+    color: var(--kold-blue);
+}
+
+h2{
+    font-size: 32px;
+    color: var(--kold-blue);
+}
+
+#starField{
+    position: relative;
+    bottom: 10vw;
+    right: 20vw;
+    height: 50vh;
+    width: 130vw;
+    z-index: -1;
+}
+
+.star, .starSixScreen{
+    position: absolute;
+}
+
+.starOne, .starThree, .starFour, .starSix{
+    width: 3vw;
+    position: absolute;
+}
+
+.starTwo, .starFive{
+    width: 1.5vw;
+    position: absolute;
+}
+
+#iceberg{
+    width: 600px;
+    height: 800px;
+    position: absolute;
+    top: calc(50% - 400px);
+    left: calc(50% - 300px);
+    transition: 2s;
+}
+
+#iceberg > div, #sixthScreenIceberg > div{
+    position: absolute;
+    width: 100%;
+}
+
+#iceberg > div > img, #sixthScreenIceberg > div > img{
+    width: 100%;
+}
+
+#icebergLight{
+    animation: icebergAnimation 1.5s infinite linear;
+    transform: scale(1.25);
+}
+
+@keyframes icebergAnimation{
+    0%, 50%, 100%{}
+    25%{
+        transform: scale(1.1) rotate(6deg);
+        opacity: .5;
+    }
+    66%{
+        transform: scale(1.5) rotate(-3deg);
+        opacity: .25; 
+    }
+}
+
+#buttonToSecondScreen{
+    position: absolute;
+    width: 600px;
+    height: 140px;
+    top: calc(50% - 70px);
+    left: calc(50% - 300px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#buttonToSecondScreenText{
+    position: absolute;
+}
+
+#buttonToSecondScreenText > h1{
+    text-transform: uppercase;
+}
+
+#downSideFirstScreen{
+    position: relative;
+    border-top: var(--kold-blue) 1px solid;
+    height: 50vh;
+    background: #000;
+    z-index: -1;
+}
+
+.firstScreenBlur{
+    position: absolute;
+    left: calc(50% - 40vw);
+    width: 80vw;
+    height: 20vw;
+    border-radius: 60%;
+    background: var(--kold-blue);
+    filter: blur(100px);
+    opacity: .4;
+    animation: firstScreenBlur 4s infinite linear;
+}
+
+#upSideFirstScreenBlur, #upSideSixScreenBlur{
+    bottom: 93%;
+}
+
+#downSideFirstScreenBlur, #downSideSixScreenBlur{
+    top: 93%;
+}
+
+@keyframes firstScreenBlur {
+    0%, 100%{}
+    50%{
+        transform: scale(1.15);
+    }
+}
+
+#secondScreen{
+    display: none;
+}
+
+.topAction{
+    display: flex;
+    justify-content: space-between;
+    padding: 24px;
+}
+
+.nameAction{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.nameActionText{
+    position: absolute;
+    text-transform: uppercase;
+}
+
+#actionTwo{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+#actionTwo > div{
+    display: flex;
+    justify-content: center;
+    position: relative;
+    width: 100%;
+}
+
+.actionTwoStar{
+    width: 360px;
+    margin: 0 10vw;
+    opacity: .2;
+    transition: 1s;
+}
+
+#actionTwoSecondLine{
+    bottom: 130px;
+}
+
+#actionTwoThirdLine{
+    bottom: 260px;
+}
+
+#actionThree{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#blockActionThree{
+    display: grid;
+    grid-template-columns: repeat(5, 150px);
+    grid-template-rows: repeat(5, 150px);
+}
+
+.blockActionThreeBlock{
+    width: 150px;
+    height: 150px;
+}
+
+.blockActionThreeBlock > img{
+    width: 100%;
+}
+
+.blockActionThreeBlockFilled{
+    background: var(--kold-blue);
+    filter: blur(15px)
+}
+
+.actionThreeBlur{
+    width: 50px;
+    height: 100%;
+    border-radius: 50%;
+    background: var(--kold-blue);
+    filter: blur(15px)
+}
+
+#actionFour{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#actionFourTable{
+    width: 1600px;
+    height: 500px;
+}
+
+#actionFourItemsTable{
+    position: absolute;
+    width: 1080px;
+    height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: 100%;
+}
+
+#actionFourItemsTableImage{
+    position: absolute;
+}
+
+#actionFourItemsList{
+    position: absolute;
+    width: 90%;
+    height: 80%;
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.actionFourItemsListLine{
+    position: relative;
+    display: flex;
+    padding: 5px;
+    align-items: center;
+    width: 100%;
+    justify-content: space-between;
+}
+
+#actionFourItemsListOne{
+    position: relative;
+    bottom: 40%;
+}
+
+#actionFourItemsListTwo{
+    position: relative;
+    top: 7%;
+}
+
+#lamp{
+    left: 18vw;
+}
+
+#picture{
+    left: 26vw;
+}
+
+#chair{
+    left: 35vw;
+}
+
+#table{
+    left: 42vw
+}
+
+#plant{
+    left: 10vw
+}
+
+#window{
+    left: 17vw;
+}
+
+#armchair{
+    left: 26vw;
+}
+
+#bed{
+    left: 36.5vw
+}
+
+.actionFourItem{
+    position: absolute;
+}
+
+#topActionSixScreen{
+    display: flex;
+    justify-content: space-between;
+    padding: 24px;
+    position: relative;
+    z-index: 1;
+}
+
+#sixthScreen{
+    position: relative;
+}
+
+#starFieldSixScreen{
+    position: relative;
+    right: 20vw;
+    height: 50vh;
+    width: 130vw;
+    z-index: -2;
+}
+
+#sixthScreenIceberg{
+    width: 2400px;
+    height: 1600px;
+    position: absolute;
+    top: 2%;
+    left: calc(50% - 1200px);
+    transition: 2s;
+}
+
+#icebergLightSixScreen{
+    animation: icebergAnimationSix 3s infinite linear;
+    transform: scale(1.1);
+}
+
+@keyframes icebergAnimationSix{
+    0%, 50%, 100%{}
+    25%{
+        transform: scale(1) rotate(6deg);
+        opacity: .5;
+    }
+    66%{
+        transform: scale(.8) rotate(-3deg);
+        opacity: .25;
+    }
+}
+
+#downSideSixScreen{
+    position: relative;
+    border-top: var(--kold-blue) 1px solid;
+    height: 25vh;
+    top: 10%;
+}
+
+.sixScreenIgloos{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    z-index: 1;
+    bottom: 20.4%;
+}
+
+.sixScreenBlurX{
+    position: absolute;
+    width: 10vw;
+    height: 120vh;
+    top: calc(50% - 60vh);
+    border-radius: 60%;
+    background: var(--kold-blue);
+    filter: blur(100px);
+    opacity: .4;
+    animation: firstScreenBlur 4s infinite linear;
+}
+
+.sixScreenBlurY{
+    position: absolute;
+    left: calc(50% - 40vw);
+    width: 80vw;
+    height: 20vw;
+    border-radius: 60%;
+    background: var(--kold-blue);
+    filter: blur(100px);
+    opacity: .4;
+    animation: firstScreenBlur 4s infinite linear;
+}
+
+.sixScreenIgloo{
+    animation: iglooFlicking 4s infinite ease-in-out;
+    animation-play-state: paused;
+}
+
+@keyframes iglooFlicking {
+    0%, 100%{opacity: 1;}
+    20%{opacity: .6;}
+    25%{opacity: .8;}
+    30%{opacity: .6;}
+    50%{opacity: 1;}
+    70%{opacity: .6;}
+    80%{opacity: .9;}
+    90%{opacity: .8;}
+}
+
+#leftSideSixScreenBlur{
+    left: 93%;
+}
+
+#rightSideSixScreenBlur{
+    right: 93%;
+}

@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KOLD</title>
+    <link rel="stylesheet" href="./stylesheets/style.css">
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+    <script src="./javascripts/script.js"></script>
+    <link rel="icon" href="./favicon.ico" type="image/x-icon">
+</head>
+<body>
+    
+    <div id="firstScreen">
+        <div id="starField">
+            <div class="star starOne">
+                <img src="./images/firstScreen/starOne.svg">
+            </div>
+            <div class="star starTwo">
+                <img src="./images/firstScreen/starTwo.svg">
+            </div>
+            <div class="star starTwo">
+                <img src="./images/firstScreen/starTwo.svg">
+            </div>  
+            <div class="star starThree">
+                <img src="./images/firstScreen/starThree.svg">
+            </div>
+        </div>
+        
+        <div id="iceberg">
+            <div>
+                <img src="./images/firstScreen/icebergLight.svg" id="icebergLight">>
+            </div>
+            <div>
+                <img src="./images/firstScreen/iceberg.svg">
+            </div>
+        </div>
+
+        <div id="buttonToSecondScreen">
+            <div id="buttonToSecondScreenImage">
+                <img src="./images/firstScreen/button.svg">
+            </div>
+            <div id="buttonToSecondScreenText">
+                <h1>Начать</h1>
+            </div>
+            <audio src="./sounds/toSecondScreen.mp3" id="toSecondScreen"></audio>
+        </div>
+
+        <div id="upSideFirstScreenBlur" class="firstScreenBlur"></div>
+        <div id="downSideFirstScreenBlur" class="firstScreenBlur"></div>
+ 
+        <div id="downSideFirstScreen"></div>
+        
+    </div>
+    <div id="secondScreen">
+        <div class="topAction">
+            <div id="buttonToFirstScreen"class="buttonToPrev">
+                <img src="./images/arrowPrev.svg">
+            </div>
+            <div class="nameAction">
+                <div class="nameActionTable">
+                    <img src="./images/namingTable.svg">
+                </div>
+                <div class="nameActionText">
+                    <h2>Зажги звезды</h2>
+                </div>
+            </div>
+            <div id="buttonToThirdScreenNext" class="buttonToNext">
+                <img src="./images/arrowNext.svg">
+            </div>
+            <audio id="moveScreen" src="./sounds/moveScreen.mp3"></audio>
+        </div>
+
+        <div id="actionTwo">
+            <div id="actionTwoFirstLine">
+                <div id="actionTwoStarOne" class="actionTwoStar">
+                    <img src="./images/secondScreen/starLight.svg">
+                </div>
+                <div id="actionTwoStarTwo" class="actionTwoStar">
+                    <img src="./images/secondScreen/starLight.svg">
+                </div>
+            </div>
+            <div id="actionTwoSecondLine">
+                <div id="actionTwoStarThree" class="actionTwoStar">
+                    <img src="./images/secondScreen/starLight.svg">
+                </div>
+                <div id="actionTwoStarFour" class="actionTwoStar">
+                    <img src="./images/secondScreen/starLight.svg">
+                </div>
+                <div id="actionTwoStarFive" class="actionTwoStar">
+                    <img src="./images/secondScreen/starLight.svg">
+                </div>
+            </div>
+            <div id="actionTwoThirdLine">
+                <div id="actionTwoStarSix" class="actionTwoStar">
+                    <img src="./images/secondScreen/starLight.svg">
+                </div>
+                <div id="actionTwoStarSeven" class="actionTwoStar">
+                    <img src="./images/secondScreen/starLight.svg">
+                </div>
+            </div>
+            <audio src="./sounds/star.mp3" id="starHover"></audio>
+        </div>
+    </div>
+    <div id="thirdScreen">
+        <div class="topAction">
+            <div id="buttonToSecondScreenPrev"class="buttonToPrev">
+                <img src="./images/arrowPrev.svg">
+            </div>
+            <div class="nameAction">
+                <div class="nameActionTable">
+                    <img src="./images/namingTable.svg">
+                </div>
+                <div class="nameActionText">
+                    <h2>Построй иглу</h2>
+                </div>
+            </div>
+            <div id="buttonToFourthScreenNext" class="buttonToNext">
+                <img src="./images/arrowNext.svg">
+            </div>
+        </div>
+        <div id="actionThree">
+            <div class="actionThreeBlur"></div>
+            <div id="blockActionThree">
+                <div class="blockActionThreeBlock">
+                    <img src="./images/thirdScreen/blockThirdAction.svg">
+                </div>
+                <audio src="./sounds/blockDestroy.mp3" id="blockPlace"></audio>
+            </div>
+            <div class="actionThreeBlur"></div>
+        </div>
+    </div>
+    <div id="fourthScreen">
+        <div class="topAction">
+            <div id="buttonToThirdScreenPrev"class="buttonToPrev">
+                <img src="./images/arrowPrev.svg">
+            </div>
+            <div class="nameAction">
+                <div class="nameActionTable">
+                    <img src="./images/namingTable.svg">
+                </div>
+                <div class="nameActionText">
+                    <h2>Обустрой иглу</h2>
+                </div>
+            </div>
+            <div id="buttonToSixthScreenNext" class="buttonToNext">
+                <img src="./images/arrowNext.svg">
+            </div>
+        </div>
+
+        <div id="actionFour">
+            <div id="actionFourTable">
+                <img src="./images/fourthScreen/actionFour.svg">
+            </div>
+            <div id="actionFourItemsTable">
+                <div id="actionFourItemsTableImage">
+                    <img src="./images/fourthScreen/itemsTable.svg">
+                </div>
+                <div id="actionFourItemsList">
+                    <div id="actionFourItemsListOne" class="actionFourItemsListLine">
+                        <div id="sofa" class="actionFourItem">
+                            <img src="./images/fourthScreen/sofa.svg">
+                        </div>
+                        <div id="lamp" class="actionFourItem">
+                            <img src="./images/fourthScreen/lamp.svg">
+                        </div>
+                        <div id="picture" class="actionFourItem">
+                            <img src="./images/fourthScreen/picture.png">
+                        </div>
+                        <div id="chair" class="actionFourItem">
+                            <img src="./images/fourthScreen/chair.svg">
+                        </div>
+                        <div id="table" class="actionFourItem">
+                            <img src="./images/fourthScreen/table.svg">
+                        </div>
+                    </div>
+                    <div id="actionFourItemsListTwo" class="actionFourItemsListLine">
+                        <div id="wardrobe" class="actionFourItem">
+                            <img src="./images/fourthScreen/wardrobe.png">
+                        </div>
+                        <div id="plant" class="actionFourItem">
+                            <img src="./images/fourthScreen/plant.svg">
+                        </div>
+                        <div id="window" class="actionFourItem">
+                            <img src="./images/fourthScreen/window.svg">
+                        </div>
+                        <div id="armchair" class="actionFourItem">
+                            <img src="./images/fourthScreen/armchair.svg">
+                        </div>
+                        <div id="bed" class="actionFourItem">
+                            <img src="./images/fourthScreen/bed.svg">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="sixthScreen">
+        <div id="topActionSixScreen">
+            <div id="buttonToFourthScreenPrev" class="buttonToPrev">
+                <img src="./images/arrowPrev.svg">
+            </div>
+            <div id="returnButton">
+                <img src="./images/restart.svg">
+            </div>
+        </div>
+
+        <div id="starFieldSixScreen">
+            <div class="starSixScreen starFour">
+                <img src="./images/firstScreen/starOne.svg">
+            </div>
+            <div class="starSixScreen starFive">
+                <img src="./images/firstScreen/starTwo.svg">
+            </div>
+            <div class="starSixScreen starFive">
+                <img src="./images/firstScreen/starTwo.svg">
+            </div>  
+            <div class="starSixScreen starSix">
+                <img src="./images/firstScreen/starThree.svg">
+            </div>
+        </div>
+
+        <div id="sixthScreenIceberg">
+            <div>
+                <img src="./images/firstScreen/icebergLight.svg" id="icebergLightSixScreen">>
+            </div>
+            <div>
+                <img src="./images/firstScreen/iceberg.svg">
+            </div>
+        </div>
+
+        <div class="sixScreenIgloos">
+            <div id="iglooOne" class="sixScreenIgloo">
+                <img src="./images/sixScreen/iglooOne.svg">
+            </div>
+            <div id="iglooTwo" class="sixScreenIgloo">
+                <img src="./images/sixScreen/iglooTwo.svg">
+            </div>
+            <div id="iglooThree" class="sixScreenIgloo">
+                <img src="./images/sixScreen/iglooThree.svg">
+            </div>
+        </div>
+
+        <div id="downSideSixScreen"></div>
+
+        <div id="upSideSixScreenBlur" class="sixScreenBlurY"></div>
+        <div id="downSideSixScreenBlur" class="sixScreenBlurY"></div>
+        <div id="leftSideSixScreenBlur" class="sixScreenBlurX"></div>
+        <div id="rightSideSixScreenBlur" class="sixScreenBlurX"></div>
+
+    </div>
+</body>
+</html>
